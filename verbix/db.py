@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
-api_url = os.getenv("API_URL")
 local_db = os.getenv("Local_DB")
 
 con = sqlite3.connect(local_db)

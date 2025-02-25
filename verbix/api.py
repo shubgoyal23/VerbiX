@@ -11,7 +11,6 @@ def search_word(word):
     try:
         data = get_word(word)
         if data != None:
-            print("from db")
             return data
         req = requests.get(api_url+word)
         if req.status_code != 200:
