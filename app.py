@@ -8,6 +8,13 @@ def main():
         userinput = input("Enter You word to find its meaning: ")
         if userinput == "quit()":
             break
+        elif userinput == "":
+            continue
+        elif userinput.isalpha() != True:
+            print("only alphabetic are allowed")
+            continue
+        else:
+            userinput = userinput.lower()
         meaning = search_word(userinput)
         meaning = meaning.split(";")
         for i, m in enumerate(meaning, start=1):
